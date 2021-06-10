@@ -10,9 +10,25 @@ namespace AppQuantidade
 {
     public partial class MainPage : ContentPage
     {
+        int quantidade = 1;
         public MainPage()
         {
             InitializeComponent();
+        }
+
+        private void btnPlus(object sender, EventArgs e)
+        {
+            quantidade++;
+            lblQuantidade.Text = quantidade.ToString();
+        }
+
+        private void btnMinus(object sender, EventArgs e)
+        {
+            if (quantidade != 0)
+            {
+                quantidade--;
+                lblQuantidade.Text = quantidade.ToString();
+            }
         }
     }
 }
